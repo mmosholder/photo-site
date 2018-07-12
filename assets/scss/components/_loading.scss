@@ -1,0 +1,25 @@
+.loading {
+  background-color: $fill-black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    position: relative;
+  }
+
+  &-plain-title {
+    color: rgba($text-loading-gray, 0.12);
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-loaded-title {
+    color: rgba($text-loading-gray, 1);
+    transition: width 240ms $t-1;
+    width: 0%;
+    z-index: 2;
+  }
+}

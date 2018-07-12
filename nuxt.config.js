@@ -28,9 +28,9 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
-  ** Customize the progress bar color
+  ** Customize the progress bar to custom component
   */
-  loading: { color: "#3B8070" },
+  // loading: "~/components/loading.vue",
   /*
   ** Build configuration
   */
