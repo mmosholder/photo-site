@@ -13,6 +13,9 @@ module.exports = {
   ],
 
   plugins: ["~/plugins/components"],
+  router: {
+    middleware: ["loadNavTakeover"]
+  },
   /*
   ** Headers of the page
   */

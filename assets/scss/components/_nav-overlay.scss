@@ -1,0 +1,32 @@
+.nav-overlay {
+  position: fixed;
+  background-position: center center;
+  background-image: url('~/assets/images/nav-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding-top: pxem(180);
+  transform: translateX(0);
+  z-index: 400;
+
+  &-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &-text {
+    p { margin-bottom: 15px;}
+  }
+
+  .grid {
+    z-index: 1;
+  }
+}

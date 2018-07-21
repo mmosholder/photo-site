@@ -22,6 +22,30 @@
   }
 }
 
+@mixin pretty-text-underline-dark($bg-color, $size, $hover-color: $bg-color) {
+  display: inline;
+  text-shadow: 1px 1px rgba(0,0,0,0.6), -1px 1px rgba(0,0,0,0.6), -1px -1px rgba(0,0,0,0.6), 1px -1px rgba(0,0,0,0.6);
+  background-image: linear-gradient(90deg, $bg-color 100%, transparent 100%);
+  background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: 100% $size+px;
+
+  &::-moz-selection {
+    background-color: #fff;
+    opacity: 0.3;
+    text-shadow: none;
+  }
+  &::selection {
+    background-color: #fff;
+    opacity: 0.3;
+    text-shadow: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(90deg, $hover-color 100%, transparent 100%);
+  }
+}
+
 @mixin grow-text-underline($bgcolor) {
   position: relative;
   z-index: 1;

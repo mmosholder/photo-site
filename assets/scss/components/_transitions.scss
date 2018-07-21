@@ -1,0 +1,11 @@
+
+.open-leave-active,
+.open-enter-active {
+  transition: 500ms;
+}
+.open-enter {
+  transform: translate(100%, 0);
+}
+.open-leave-to {
+  transform: translate(100%, 0);
+}
