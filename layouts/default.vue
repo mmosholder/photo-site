@@ -18,7 +18,7 @@ export default {
     Footer
   },
     created() {
-    console.log('page loaded')
+    console.log('dfault loaded')
   }
 }
 </script>
