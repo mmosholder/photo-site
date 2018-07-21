@@ -16,6 +16,9 @@ export default {
   components: {
     Nav,
     Footer
+  },
+  created() {
+    console.log('layout loaded')
   }
 }
 </script>

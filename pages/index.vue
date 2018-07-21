@@ -12,7 +12,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.nuxtLoading);
     this.$storyblok.init();
     this.$storyblok.on('change', () => {
       location.reload(true)
