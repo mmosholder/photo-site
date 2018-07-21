@@ -11,6 +11,10 @@ export default {
     return { story: { content: {} } }
   },
 
+    created() {
+    console.log('index loaded')
+  },
+
   mounted() {
     this.$storyblok.init();
     this.$storyblok.on('change', () => {
