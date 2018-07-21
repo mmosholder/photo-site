@@ -1,8 +1,8 @@
 <template>
   <div>
     <Nav />
-    <main id="main" role="main" :class="[this.$route.name == 'index' ? 'home' : '']">
-      <!-- <nuxt/> -->
+    <main id="main" role="main">
+      <nuxt/>
     </main>
     <Footer />
   </div>
