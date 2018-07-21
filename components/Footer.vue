@@ -8,10 +8,16 @@
       <div class="xs-mb-30">
         <a href="mailto: hello@mikedarnay.com" class="text-25 text-dark link-underline inline-flex">hello@mikedarnay.com</a>
       </div>
-      <div class="flex">
+      <!-- <div class="flex">
         <a href="https://www.twitter.com/MikeDarnay" class="footer-icon text-dark xs-mr-20" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://www.instagram.com/mikedarnay" class="footer-icon text-dark" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+
+}
+</script>
