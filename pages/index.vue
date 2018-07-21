@@ -30,15 +30,15 @@ export default {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     console.log('async data started', version);
     // Load the JSON from the API
-    return context.app.$storyapi.get(`cdn/stories/home`, {
-      version: version
-    }).then((res) => {
-      console.log(res);
-      return JSON.parse(JSON.stringify(res.data));
-    }).catch((res) => {
-      console.log(res);
-      context.error({ statusCode: res.response.status, message: res.response.data })
-    })
+    // return context.app.$storyapi.get(`cdn/stories/home`, {
+    //   version: version
+    // }).then((res) => {
+    //   console.log(res);
+    //   return JSON.parse(JSON.stringify(res.data));
+    // }).catch((res) => {
+    //   console.log(res);
+    //   context.error({ statusCode: res.response.status, message: res.response.data })
+    // })
   }
 }
 </script>
