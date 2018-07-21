@@ -7,7 +7,7 @@ module.exports = {
       {
         accessToken:
           process.env.NODE_ENV == "production"
-            ? " 5Mupd6qDLh3HQXratr8tqgtt "
+            ? "5Mupd6qDLh3HQXratr8tqgtt "
             : "zoztQUQSuAA3fsydONDCQAtt",
         cacheProvider: "memory"
       }
