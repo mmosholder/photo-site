@@ -5,8 +5,8 @@
         Mike Darnay <br>
         Photography
       </a>
-      <div class="title-4 caps text-dark" v-if="!navOpen" @click="navOpen = !navOpen">About</div>
-      <div class="title-4 caps text-white z10" v-if="navOpen" @click="navOpen = !navOpen">Close</div>
+      <div class="title-4 caps text-dark" v-if="!navOpen" @click="toggleNav">About</div>
+      <div class="title-4 caps text-white z10" v-if="navOpen" @click="toggleNav">Close</div>
     </div>
     <transition name="open">
         <div v-if="navOpen" class="nav-overlay">
@@ -44,6 +44,22 @@ export default {
         return 'text-white';
       } else {
         return 'text-dark';
+      }
+    }
+  },
+
+  methods: {
+    toggleNav() {
+      this.navOpen = !this.navOpen;
+      const body = document.getElementsByTagName('body');
+      const html = document.getElementsByTagName('html');
+
+      if (this.navOpen) {
+        body[0].classList.add('nav-open');
+        html[0].classList.add('nav-open');
+      } else {
+        body[0].classList.remove('nav-open');
+        html[0].classList.remove('nav-open');
       }
     }
   }
