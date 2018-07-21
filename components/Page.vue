@@ -9,7 +9,10 @@
 <script>
 
   export default {
-    props: ['blok']
+    props: ['blok'],
+    created() {
+    console.log('page loaded')
+  }
   }
 
 </script>
