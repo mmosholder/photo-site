@@ -1,10 +1,10 @@
 <template>
   <nav class="nav xs-pt-25 sm-pt-70 xs-pb-25 sm-pb-70 xs-pl-20 xs-pr-20 sm-pl-50 sm-pr-50">
     <div class="flex justify-space-between align-center">
-      <a href="#" :class="['title-2 caps decoration-none link-title z10 position-relative ' + navClass]">
+      <nuxt-link href="/home" :class="['title-2 caps decoration-none link-title z10 position-relative ' + navClass]">
         Mike Darnay <br>
         Photography
-      </a>
+      </nuxt-link>
       <div class="title-4 caps text-dark" v-if="!navOpen" @click="toggleNav">About</div>
       <div class="title-4 caps text-white z10" v-if="navOpen" @click="toggleNav">Close</div>
     </div>
