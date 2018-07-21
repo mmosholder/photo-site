@@ -29,7 +29,7 @@ export default {
     const { data } = await context.app.$storyapi.get(`cdn/stories/home`,
       { version: context.isDev ? 'draft' : 'published'})
 
-    return { story: data.story }
+    return {story: data.story}
   }
 }
 </script>
