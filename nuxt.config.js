@@ -19,13 +19,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "darnay-prod",
+    title: "Mike Darnay Photography",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [{defer: true, src: "https://use.fontawesome.com/releases/v5.0.6/js/all.js"}]
   },
   /*
   ** Customize the progress bar to custom component

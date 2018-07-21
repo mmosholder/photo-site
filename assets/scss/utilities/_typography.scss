@@ -42,34 +42,57 @@
   }
 
   &-5 {
+    @include font-smoothing;
+    @include akrobat-black;
+    $map: (576px: 40px, 992px: 60px);
+    line-height: 1;
+    @include poly-fluid-sizing('font-size', $map);
+    font-weight: $regular;
+    letter-spacing: 2px;
   }
 
   &-6 {
+    @include font-smoothing;
+    @include akrobat-black;
+    $map: (576px: 60px, 992px: 80px);
+    line-height: 1;
+    @include poly-fluid-sizing('font-size', $map);
+    font-weight: $regular;
+    letter-spacing: 1px;
   }
 }
 
 .text {
-  // &-22 {
-  //   @include font-smoothing;
-  //   font-family: $serif;
-  //   $map: (576px: 19px, 768px: 22px);
-  //   line-height: 1.55;
-  //   @include poly-fluid-sizing('font-size', $map);
-  //   font-weight: $regular;
+  &-25 {
+    @include font-smoothing;
+    @include akrobat-semi;
+    $map: (576px: 20px, 768px: 25px);
+    line-height: 1.23;
+    @include poly-fluid-sizing('font-size', $map);
+    font-weight: $regular;
+    letter-spacing: 1px;
 
-  //   a {
-  //     color: $text-aqua;
-  //     text-decoration: none;
-  //     @include pretty-text-underline($text-aqua, 1);
-  //     transition: color 240ms $t-1;
+    // a {
+    //   color: $text-aqua;
+    //   text-decoration: none;
+    //   @include pretty-text-underline($text-aqua, 1);
+    //   transition: color 240ms $t-1;
 
-  //     &:hover,
-  //     &:focus {
-  //       color: darken($text-aqua, 15%);
-  //       transition: color 240ms $t-1;
-  //     }
-  //   }
-  // }
+    //   &:hover,
+    //   &:focus {
+    //     color: darken($text-aqua, 15%);
+    //     transition: color 240ms $t-1;
+    //   }
+    // }
+  }
+
+  &-16 {
+    @include font-smoothing;
+    @include noto;
+    $map: (576px: 14px, 768px: 16px);
+    line-height: 1.4;
+    @include poly-fluid-sizing('font-size', $map);
+  }
 
   // &-20 {
   //   @include font-smoothing;
@@ -99,18 +122,21 @@
 
 .link {
 
-  // &-paragraph {
-  //   color: $text-green-dark;
-  //   @include pretty-text-underline($text-green-dark, 1);
-
-  //   &:hover,
-  //   &:focus {
-  //     color: darken($text-green-dark, 20%);
-  //   }
-  // }
+  &-title {
+    transition: color 240ms $t-1;
+    &:hover {
+      color: lighten($text-dark, 20%);
+    }
+  }
 
   &-underline {
+    transition: color 240ms $t-1;
+    text-decoration: none;
     @include pretty-text-underline($text-dark, 1);
+
+    &:hover {
+      color: lighten($text-dark, 20%);
+    }
   }
 
   // &-footer {

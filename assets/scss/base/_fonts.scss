@@ -1,5 +1,11 @@
+ @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+
 @mixin akrobat-regular {
 	font-family: 'akrobatregular';
+}
+
+@mixin akrobat-black {
+	font-family: 'akrobatblack';
 }
 
 @mixin akrobat-bold {
@@ -12,4 +18,10 @@
 
 @mixin norwester {
 	font-family: 'norwesterregular';
+}
+
+@mixin noto {
+  font-family: 'Noto Serif', serif;
+  font-weight: normal;
+  font-style: normal;
 }

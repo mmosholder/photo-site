@@ -4,7 +4,7 @@ $gutter-width: 3.125rem;
 $gutter-width-mobile: 2.5rem;
 
 $grid-breakpoints: (xs: 0px, sm: 768px, md: 1025px, lg: 1200px, xl: 1600px);
-$gutter-breakpoints: (xs: $gutter-width-mobile * .5, sm: 3.75rem, md: $gutter-width * .5);
+$gutter-breakpoints: (xs: $gutter-width-mobile * .5, sm: $gutter-width * .5);
 $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * .5 * -1);
 
 // map functions
@@ -37,7 +37,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   max-width: (100% * $col-num / $columns);
 }
 
- .es-main-loader {
+ .grid-main-loader {
     height:100vh;
     background-color:$fill-white;
     // background-image: url("../images/loading.gif");
@@ -46,7 +46,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
     background-repeat:no-repeat;
   }
 
-.es-grid {
+.grid {
   // margin-left: gutter('xs');
   // margin-right: gutter('xs');
   padding-left: gutter('xs');
@@ -59,16 +59,9 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
     padding-left: gutter('sm');
     padding-right: gutter('sm');
   }
-
-  @include mq($from: breakpoint('md')) {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: gutter('md');
-    padding-right: gutter('md');
-  }
 }
 
-.es-row {
+.row {
   box-sizing: border-box;
   min-height: 1px;
   display: flex;
@@ -77,8 +70,8 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   flex-basis: auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: gutter-compensation('sm');
-  margin-right: gutter-compensation('sm');
+  margin-left: gutter-compensation('xs');
+  margin-right: gutter-compensation('xs');
 
   @include mq($from: breakpoint('sm')) {
     margin-left: gutter-compensation('sm');
@@ -87,7 +80,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 }
 
 // Spans ( Columns with 1px padding )
-[class*='es-span-'] {
+[class*='grid-span-'] {
   position: relative;
   min-height: 1px;
   padding-left: 1px;
@@ -100,7 +93,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
-      .es-span-#{$breakpoint}-#{$i} {
+      .grid-span-#{$breakpoint}-#{$i} {
         width: (100% / $columns * $i );
         max-width: (100% / $columns * $i );
       }
@@ -109,7 +102,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 }
 
 // Columns
-[class*='es-col-'] {
+[class*='grid-col-'] {
   position: relative;
   min-height: 1px;
   padding-left: gutter('xs');
@@ -119,15 +112,15 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   flex-basis: auto;
 
   @media (min-width: breakpoint('sm')) {
-    padding-left: gutter('xs');
-    padding-right: gutter('xs');
+    padding-left: gutter('sm');
+    padding-right: gutter('sm');
   }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
-      .es-col-#{$breakpoint}-#{$i} {
+      .grid-col-#{$breakpoint}-#{$i} {
         width: (100% / $columns * $i );
         max-width: (100% / $columns * $i );
       }
@@ -139,7 +132,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
-      .es-offset-#{$breakpoint}-#{$i} {
+      .grid-offset-#{$breakpoint}-#{$i} {
         margin-left: (100% / $columns * $i);
       }
     }
@@ -149,7 +142,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 // Hides
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
-    .es-hidden-#{$breakpoint} {
+    .grid-hidden-#{$breakpoint} {
       display: none;
     }
   }
@@ -158,7 +151,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 // Shows Flex
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
-    .es-show-#{$breakpoint}-flex {
+    .grid-show-#{$breakpoint}-flex {
       display: flex;
     }
   }
@@ -167,7 +160,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 // Shows block
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
-    .es-show-#{$breakpoint} {
+    .grid-show-#{$breakpoint} {
       display: block;
     }
   }

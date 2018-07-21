@@ -1,0 +1,65 @@
+.home-grid {
+  &-item {
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      .home-grid-item-bg {
+        filter: grayscale(0);
+        transition: filter 240ms $t-1;
+      }
+
+      .home-grid-item-overlay {
+        opacity: 1;
+        display: flex;
+        transition: opacity 240ms $t-1;
+      }
+    }
+
+    &-bg {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding-top: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: grayscale(100%);
+      position: relative;
+      z-index: 0;
+      transition: filter 240ms $t-1;
+    }
+
+    &-overlay {
+      z-index: 1;
+      background-color: rgba($fill-gray, 0.52);
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 240ms $t-1;
+    }
+
+    // &-title {
+    //   position: relative;
+    //   z-index: 2;
+
+      .-back {
+        position: absolute;
+        z-index: 0;
+        margin: 2px 0 0 7px;
+      }
+
+      .-front {
+        position: absolute;
+        z-index: 1;
+      }
+    // }
+  }
+}

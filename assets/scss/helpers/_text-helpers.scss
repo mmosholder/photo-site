@@ -1,18 +1,18 @@
 @mixin pretty-text-underline($bg-color, $size, $hover-color: $bg-color) {
   display: inline;
-  text-shadow: 1px 1px #F9F9F9, -1px 1px #F9F9F9, -1px -1px #F9F9F9, 1px -1px #F9F9F9;
+  text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff;
   background-image: linear-gradient(90deg, $bg-color 100%, transparent 100%);
   background-position: 0 90%;
   background-repeat: no-repeat;
   background-size: 100% $size+px;
 
   &::-moz-selection {
-    background-color: #f9f9f9;
+    background-color: #fff;
     opacity: 0.3;
     text-shadow: none;
   }
   &::selection {
-    background-color: #f9f9f9;
+    background-color: #fff;
     opacity: 0.3;
     text-shadow: none;
   }
