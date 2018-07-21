@@ -5,8 +5,8 @@ module.exports = {
       {
         accessToken:
           process.env.NODE_ENV == "production"
-            ? "5Mupd6qDLh3HQXratr8tqgtt "
-            : "zoztQUQSuAA3fsydONDCQAtt",
+            ? "HGemaVvgLEceClZxmcplmQtt"
+            : "QbPPtDbm6umYsWkrs7wVDAtt",
         cacheProvider: "memory"
       }
     ]
@@ -24,7 +24,12 @@ module.exports = {
       { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    script: [{defer: true, src: "https://use.fontawesome.com/releases/v5.0.6/js/all.js"}]
+    script: [
+      {
+        defer: true,
+        src: "https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+      }
+    ]
   },
   /*
   ** Customize the progress bar to custom component
@@ -37,15 +42,15 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    // extend(config, { isDev, isClient }) {
-    //   if (isDev && isClient) {
-    //     config.module.rules.push({
-    //       enforce: "pre",
-    //       test: /\.(js|vue)$/,
-    //       loader: "eslint-loader",
-    //       exclude: /(node_modules)/
-    //     });
-    //   }
-    // }
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/
+        });
+      }
+    }
   }
 };
