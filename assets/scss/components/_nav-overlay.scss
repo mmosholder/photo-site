@@ -8,9 +8,13 @@
   height: 100vh;
   top: 0;
   left: 0;
-  padding-top: pxem(180);
+  padding-top: pxem(125);
   transform: translateX(0);
   z-index: 400;
+
+  @include mq($from: $breakpoint-small) {
+    padding-top: pxem(180);
+  }
 
   &-filter {
     position: absolute;

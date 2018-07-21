@@ -54,7 +54,7 @@
   &-6 {
     @include font-smoothing;
     @include akrobat-black;
-    $map: (576px: 60px, 992px: 80px);
+    $map: (576px: 40px, 992px: 80px);
     line-height: 1;
     @include poly-fluid-sizing('font-size', $map);
     font-weight: $regular;
@@ -118,7 +118,7 @@
   &-16 {
     @include font-smoothing;
     @include noto;
-    $map: (576px: 14px, 768px: 16px);
+    $map: (576px: 12px, 768px: 16px);
     line-height: 1.4;
     @include poly-fluid-sizing('font-size', $map);
   }
