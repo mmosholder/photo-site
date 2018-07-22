@@ -39,39 +39,38 @@
       position: absolute;
       top: 5%;
       left: 5%;
-      display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0;
+      opacity: 1;
+      display: flex;
       transition: opacity 240ms $t-1;
+
+      @include mq($from: 700px) {
+        opacity: 0;
+      }
     }
 
-    // &-title {
-    //   position: relative;
-    //   z-index: 2;
+    .-back {
+      position: absolute;
+      z-index: 0;
+      margin: 2px 0 0 7px;
+      width: 100%;
+      text-align: center;
 
-      .-back {
-        position: absolute;
-        z-index: 0;
-        margin: 2px 0 0 7px;
-        width: 100%;
-        text-align: center;
-
-        @include mq($from: $breakpoint-small) {
-          // max-width: 97%;
-        }
+      @include mq($from: $breakpoint-small) {
+        // max-width: 97%;
       }
+    }
 
-      .-front {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        text-align: center;
+    .-front {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      text-align: center;
 
-        @include mq($from: $breakpoint-small) {
-          // max-width: 97%;
-        }
+      @include mq($from: $breakpoint-small) {
+        // max-width: 97%;
       }
-    // }
+    }
   }
 }
