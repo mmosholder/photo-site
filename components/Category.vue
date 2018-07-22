@@ -9,7 +9,7 @@
           <div :class="[item.size == 'full' ? 'grid-col-xs-6 xs-mb-50 md-mb-100' : 'grid-col-xs-6 grid-col-sm-3 xs-mb-50 md-mb-100']" v-for="(item,i) in blok.images" :key="i">
             <div class="category-item">
               <img :src="item.image" alt="item.caption" class="z1">
-              <div class="z2 category-item-caption">
+              <div v-if="item.caption.length > 0" class="z2 category-item-caption">
                 <p class="text-right text-16 text-white">{{item.caption}}</p>
               </div>
             </div>
