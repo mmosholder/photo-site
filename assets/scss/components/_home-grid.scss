@@ -58,7 +58,7 @@
         text-align: center;
 
         @include mq($from: $breakpoint-small) {
-          width: 90%;
+          // max-width: 97%;
         }
       }
 
@@ -69,7 +69,7 @@
         text-align: center;
 
         @include mq($from: $breakpoint-small) {
-          width: 90%;
+          // max-width: 97%;
         }
       }
     // }

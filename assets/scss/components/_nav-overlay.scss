@@ -29,12 +29,18 @@
   &-text {
     p { margin-bottom: 15px;}
 
-    img {
-      margin: 30px 0 0 0;
-    }
+    // img {
+    //   margin: 30px 0 0 0;
+    // }
   }
 
   .grid {
     z-index: 1;
+
+    // @include mq($to: $breakpoint-small) {
+      height: 100%;
+      margin-bottom: 30px;
+      overflow-y: auto;
+    // }
   }
 }
