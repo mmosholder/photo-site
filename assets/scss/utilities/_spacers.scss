@@ -72,32 +72,12 @@
   }
 }
 
-// Negative padding bottom
-@include generate-breakpoint-prefixes {
-  @for $i from 1 through 60 {
-    $i: $i * 5;
-    &npb-#{$i} {
-      padding-bottom: -($i)+px;
-    }
-  }
-}
-
 // Padding top
 @include generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &pt-#{$i} {
       padding-top: ($i)+px;
-    }
-  }
-}
-
-// Negative padding top
-@include generate-breakpoint-prefixes {
-  @for $i from 1 through 60 {
-    $i: $i * 5;
-    &npt-#{$i} {
-      padding-top: -($i)+px;
     }
   }
 }
