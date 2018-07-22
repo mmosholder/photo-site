@@ -3,7 +3,7 @@
     <div class="home-grid-item-bg" :style="{backgroundImage: 'url(' + info.image + ')'}"></div>
     <div class="home-grid-item-overlay" :style="'border: 10px solid ' + info.color + ';'">
       <!-- <div class="home-grid-item-title"> -->
-        <h2 class="-back title-5 text-black caps">{{info.title}}</h2>
+        <!-- <h2 class="-back title-5 text-black caps">{{info.title}}</h2> -->
         <h2 class="-front title-5 caps" :style="'color: ' + info.color">{{info.title}}</h2>
       <!-- </div> -->
     </div>

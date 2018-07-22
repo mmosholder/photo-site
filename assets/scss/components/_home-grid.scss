@@ -33,7 +33,7 @@
 
     &-overlay {
       z-index: 1;
-      background-color: rgba($fill-gray, 0.52);
+      background-color: rgba($fill-gray, 0.7);
       width: 90%;
       height: 90%;
       position: absolute;
@@ -67,10 +67,7 @@
       z-index: 1;
       width: 100%;
       text-align: center;
-
-      @include mq($from: $breakpoint-small) {
-        // max-width: 97%;
-      }
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.90);
     }
   }
 }
