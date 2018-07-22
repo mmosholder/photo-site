@@ -24,7 +24,13 @@ module.exports = {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Nuxt.js project" }
+      { hid: "description", name: "description", content: "Photojournalism based out of Pittsburgh and Southwestern PA." },
+      { property: "og:title", content: 'Mike Darnay Photography' },
+      { property: "og:url", content: "http://mikedarnay.com/"},
+      { propery: "og:type", content: "website" },
+      { property: "og:site_name", content: "Mike Darnay Photography"},
+      { property: "og:description", content: "Mike Darnay is a photojournalist based out of the Pittsburgh and Southwestern PA region, specializing in sports, feature stories, news, and other projects."},
+      { property: "og:image", content:"/share.jpg"}
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
     script: [
