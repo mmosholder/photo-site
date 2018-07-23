@@ -27,10 +27,15 @@ module.exports = {
       { hid: "description", name: "description", content: "Photojournalism based out of Pittsburgh and Southwestern PA." },
       { property: "og:title", content: 'Mike Darnay Photography' },
       { property: "og:url", content: "http://mikedarnay.com/"},
-      { propery: "og:type", content: "website" },
+      { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Mike Darnay Photography"},
       { property: "og:description", content: "Mike Darnay is a photojournalist based out of the Pittsburgh and Southwestern PA region, specializing in sports, feature stories, news, and other projects."},
-      { property: "og:image", content:"/share.jpg"}
+      { property: "og:image", content:"/share.jpg"},
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "twitter:card", content: "summary_large_image" },
+      { property: "twitter:description", content: "Mike Darnay is a photojournalist based out of the Pittsburgh and Southwestern PA region, specializing in sports, feature stories, news, and other projects." },
+      { property: "twitter:image", content: "/share.jpg" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
     script: [
