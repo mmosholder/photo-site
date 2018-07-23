@@ -5,8 +5,8 @@
         Mike Darnay <br>
         Photography
       </a>
-      <div class="title-4 caps text-dark" v-if="!navOpen" @click="toggleNav">About</div>
-      <div class="title-4 caps text-white z10" v-if="navOpen" @click="toggleNav">Close</div>
+      <div class="title-4 caps text-dark pointer" v-if="!navOpen" @click="toggleNav">About</div>
+      <div class="title-4 caps text-white z10 pointer" v-if="navOpen" @click="toggleNav">Close</div>
     </div>
     <transition name="open">
         <div v-if="navOpen" class="nav-overlay">
