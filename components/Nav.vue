@@ -1,7 +1,7 @@
 <template>
   <nav class="nav xs-pt-25 sm-pt-70 xs-pb-25 sm-pb-70 xs-pl-20 xs-pr-20 sm-pl-50 sm-pr-50">
     <div class="flex justify-space-between align-center">
-      <a href="/home" :class="['title-2 caps decoration-none link-title z10 position-relative ' + navClass]">
+      <a href="/" :class="['title-2 caps decoration-none link-title z10 position-relative ' + navClass]">
         Mike Darnay <br>
         Photography
       </a>

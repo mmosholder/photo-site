@@ -1,7 +1,7 @@
 <template>
   <footer class="nav xs-pt-50 sm-pt-50 xs-pb-50 sm-pb-50 xs-pl-20 xs-pr-20 sm-pl-50 sm-pr-50">
     <div class="flex flex-column">
-      <a href="/home" class="title-3 text-dark decoration-none xs-mb-30 caps link-title">
+      <a href="/" class="title-3 text-dark decoration-none xs-mb-30 caps link-title">
         Mike Darnay <br>
         Photography
       </a>
