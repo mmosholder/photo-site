@@ -11,8 +11,8 @@ module.exports = {
       }
     ]
   ],
+  plugins: ["~/plugins/components", "~/plugins/vue-plyr"],
 
-  plugins: ["~/plugins/components"],
   router: {
     middleware: ["loadNavTakeover"]
   },

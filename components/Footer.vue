@@ -9,8 +9,8 @@
         <a href="mailto:mjdarnay@comcast.net" class="text-25 text-dark link-underline inline-flex">mjdarnay@comcast.net</a>
       </div>
       <div class="flex">
-        <a href="https://www.twitter.com/MikeDarnay" class="footer-icon text-dark xs-mr-20" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/mikedarnay" class="footer-icon text-dark" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- <a href="https://www.twitter.com/MikeDarnay" class="footer-icon text-dark xs-mr-20" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/mikedarnay" class="footer-icon text-dark" target="_blank"><i class="fab fa-instagram"></i></a> -->
       </div>
     </div>
   </footer>
