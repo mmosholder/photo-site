@@ -17,7 +17,7 @@
     "axios": "^0.18.0",
     "lodash": "^4.17.10",
     "marked": "^0.3.19",
-    "node-sass": "4.14.1",
+    "node-sass": "7.0.0",
     "nuxt": "^1.0.0",
     "plyr": "^3.5.6",
     "storyblok-nuxt": "0.0.3",
