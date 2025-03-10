@@ -8,8 +8,7 @@
     "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.10.1",
