@@ -1,6 +1,6 @@
+@use '../helpers/mixins' as mixins;
 // Classes for flexing items
 // ------------------------------------
-
 
 // Generic
 // --------------------
@@ -65,77 +65,77 @@
 // ------------------------
 
 // Flex column
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &flex-column {
     flex-direction: column;
   }
 }
 
 // Flex row
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &flex-row {
     flex-direction: row;
   }
 }
 
 // Align Center
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &align-center {
     align-items: center;
   }
 }
 
 // Align Baseline
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &align-baseline {
     align-items: baseline;
   }
 }
 
 // Align Flex End
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &align-end {
     align-items: flex-end;
   }
 }
 
 // Align Flex Start
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &align-start {
     align-items: flex-start;
   }
 }
 
 // Justify Space Between
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &justify-space-between {
     justify-content: space-between;
   }
 }
 
 // Justify Space around
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &justify-space-around {
     justify-content: space-around;
   }
 }
 
 // Justify Center
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &justify-center {
     justify-content: center;
   }
 }
 
 // Justify Flex End
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &justify-end {
     justify-content: flex-end;
   }
 }
 
 // Justify Flex Start
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   &justify-start {
     justify-content: flex-start;
   }

@@ -1,15 +1,15 @@
-//
+@use '../helpers/vars' as vars;
 // Position Classes
 // --------------------------------------------------
 
 .absolute {position: absolute;}
 .fixed {position: fixed;}
 .relative {position: relative;}
-.z1 {z-index: $z1;}
-.z2 {z-index: $z2;}
-.z3 {z-index: $z3;}
-.z4 {z-index: $z4;}
-.z10 {z-index: $z10;}
+.z1 {z-index: vars.$z1;}
+.z2 {z-index: vars.$z2;}
+.z3 {z-index: vars.$z3;}
+.z4 {z-index: vars.$z4;}
+.z10 {z-index: vars.$z10;}
 .block {display: block;}
 .inline-block {display: inline-block;}
 .inline-flex {display: inline-flex;}

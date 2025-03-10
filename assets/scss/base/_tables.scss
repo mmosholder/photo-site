@@ -1,9 +1,10 @@
+@use "../helpers/mixins" as mixins;
 //
 // Table Styles
 // --------------------------------------------------
 
 table {
-  @include tabular-figures;
+  @include mixins.tabular-figures;
   border-collapse: separate;
   border-spacing: 0;
   max-width: 100%;

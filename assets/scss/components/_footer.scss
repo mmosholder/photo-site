@@ -1,10 +1,12 @@
+@use 'sass:color';
+@use '../helpers/vars' as vars;
 .footer {
   &-icon {
     font-size: 30px;
-    transition: color 240ms $t-1;
+    transition: color 240ms vars.$t-1;
 
     &:hover {
-      color: lighten($text-dark, 30%);
+      color: color.adjust(vars.$text-dark, $lightness: 30%);
     }
   }
 }

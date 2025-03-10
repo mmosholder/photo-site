@@ -2,24 +2,13 @@
   <div>
     <Nav />
     <main id="main" role="main">
-      <nuxt/>
+      <slot />
     </main>
     <Footer />
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import Nav from '~/components/Nav.vue'
 import Footer from '~/components/Footer.vue'
-
-export default {
-  components: {
-    Nav,
-    Footer
-  }
-}
 </script>
-
-<style lang="scss">
-@import '../assets/scss/styles.scss';
-</style>

@@ -1,3 +1,6 @@
+@use '../helpers/vars' as vars;
+@use '../helpers/mixins' as mixins;
+
 .nav-overlay {
   position: fixed;
   background-position: center center;
@@ -8,12 +11,12 @@
   height: 100vh;
   top: 0;
   left: 0;
-  padding-top: pxem(125);
+  padding-top: mixins.pxem(125);
   transform: translateX(0);
   z-index: 400;
 
-  @include mq($from: $breakpoint-small) {
-    padding-top: pxem(180);
+  @include mixins.mq($from: vars.$breakpoint-small) {
+    padding-top: mixins.pxem(180);
   }
 
   &-filter {

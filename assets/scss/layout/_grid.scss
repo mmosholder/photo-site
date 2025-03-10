@@ -1,4 +1,8 @@
-$container-max-width: pxem(1260);
+@use "sass:map";
+@use '../helpers/vars' as vars;
+@use '../helpers/mixins' as mixins;
+
+$container-max-width: 1260px;
 $columns: 6;
 $gutter-width: 3.125rem;
 $gutter-width-mobile: 2.5rem;
@@ -9,37 +13,37 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 
 // map functions
 @function breakpoint($breakpoint) {
-  @if map-has-key($grid-breakpoints, $breakpoint) {
-    @return map-get($grid-breakpoints, $breakpoint);
+  @if map.has-key($grid-breakpoints, $breakpoint) {
+    @return map.get($grid-breakpoints, $breakpoint);
   } @else {
     @warn 'breakpoint: could not find #{$breakpoint} in $grid-breakpoints map. Please make sure it is defined';
   }
 }
 
 @function gutter($breakpoint) {
-  @if map-has-key($gutter-breakpoints, $breakpoint) {
-    @return map-get($gutter-breakpoints, $breakpoint);
+  @if map.has-key($gutter-breakpoints, $breakpoint) {
+    @return map.get($gutter-breakpoints, $breakpoint);
   } @else {
     @warn 'gutter: could not find #{$breakpoint} in $gutter-breakpoints map. Please make sure it is defined';
   }
 }
 
 @function gutter-compensation($breakpoint) {
-  @if map-has-key($gutter-compensations, $breakpoint) {
-    @return map-get($gutter-compensations, $breakpoint);
+  @if map.has-key($gutter-compensations, $breakpoint) {
+    @return map.get($gutter-compensations, $breakpoint);
   } @else {
     @warn 'grid-gutter: could not find #{$breakpoint} in $grid-breakpoints map. Please make sure it is defined';
   }
 }
 
 @mixin col($col-num) {
-  flex-basis: (100% * $col-num / $columns);
-  max-width: (100% * $col-num / $columns);
+  flex-basis: calc(100% * $col-num / $columns);
+  max-width: calc(100% * $col-num / $columns);
 }
 
  .grid-main-loader {
     height:100vh;
-    background-color:$fill-white;
+    background-color: vars.$fill-white;
     // background-image: url("../images/loading.gif");
     background-position: center center;
     background-size: 32px 32px;
@@ -53,7 +57,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   padding-right: gutter('xs');
   max-width: $container-max-width;
 
-  @include mq($from: breakpoint('sm')) {
+  @include mixins.mq($from: breakpoint('sm')) {
     margin-left: auto;
     margin-right: auto;
     padding-left: gutter('sm');
@@ -73,7 +77,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   margin-left: gutter-compensation('xs');
   margin-right: gutter-compensation('xs');
 
-  @include mq($from: breakpoint('sm')) {
+  @include mixins.mq($from: breakpoint('sm')) {
     margin-left: gutter-compensation('sm');
     margin-right: gutter-compensation('sm');
   }
@@ -90,12 +94,12 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   flex-basis: auto;
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
       .grid-span-#{$breakpoint}-#{$i} {
-        width: (100% / $columns * $i );
-        max-width: (100% / $columns * $i );
+        width: calc(100% / $columns * $i );
+        max-width: calc(100% / $columns * $i );
       }
     }
   }
@@ -117,30 +121,30 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
   }
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
       .grid-col-#{$breakpoint}-#{$i} {
-        width: (100% / $columns * $i );
-        max-width: (100% / $columns * $i );
+        width: calc(100% / $columns * $i );
+        max-width: calc(100% / $columns * $i );
       }
     }
   }
 }
 
 // Offsets
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
       .grid-offset-#{$breakpoint}-#{$i} {
-        margin-left: (100% / $columns * $i);
+        margin-left: calc(100% / $columns * $i);
       }
     }
   }
 }
 
 // Hides
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     .grid-hidden-#{$breakpoint} {
       display: none;
@@ -149,7 +153,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 }
 
 // Shows Flex
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     .grid-show-#{$breakpoint}-flex {
       display: flex;
@@ -158,7 +162,7 @@ $gutter-compensations: (xs: $gutter-width-mobile * .5 * -1, sm: $gutter-width * 
 }
 
 // Shows block
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     .grid-show-#{$breakpoint} {
       display: block;

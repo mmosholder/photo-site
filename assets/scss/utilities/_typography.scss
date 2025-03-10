@@ -1,150 +1,154 @@
+@use 'sass:color';
+
+@use "../helpers/mixins" as mixins;
+@use "../helpers/vars" as vars;
+@use "../helpers/text-helpers" as text;
+@use "../helpers/fluid-type" as type;
 // Typography base text & title classes
 // ------------------------------------
 
 .title {
 
   &-1 {
-    @include font-smoothing;
-    @include norwester;
     $map: (576px: 62px, 992px: 90px);
-    line-height: 1.2;
-    @include poly-fluid-sizing('font-size', $map);
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'norwesterregular';
+      line-height: 1.2;
+    }
   }
 
   &-2 {
-    @include font-smoothing;
-    @include norwester;
     $map: (576px: 30px, 992px: 40px);
-    line-height: 1;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'norwesterregular';
+      line-height: 1;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-3 {
-    @include font-smoothing;
-    @include norwester;
     $map: (576px: 25px, 992px: 30px);
-    line-height: 1;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'norwesterregular';
+      line-height: 1;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-4 {
-    @include font-smoothing;
-    @include akrobat-bold;
     $map: (576px: 20px, 992px: 26px);
-    line-height: 1.23;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'akrobatbold';
+      line-height: 1.23;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-5 {
-    @include font-smoothing;
-    @include akrobat-black;
     $map: (576px: 40px, 992px: 60px);
-    line-height: 1;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'akrobatblack';
+      line-height: 1;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-6 {
-    @include font-smoothing;
-    @include akrobat-black;
     $map: (576px: 40px, 992px: 80px);
-    line-height: 1;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'akrobatblack';
+      line-height: 1;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 }
 
 .text {
   &-36 {
-    @include font-smoothing;
-    @include norwester;
     $map: (576px: 26px, 992px: 36px);
-    line-height: 1;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'norwesterregular';
+      line-height: 1;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-25 {
-    @include font-smoothing;
-    @include akrobat-semi;
     $map: (576px: 20px, 768px: 25px);
-    line-height: 1.23;
-    @include poly-fluid-sizing('font-size', $map);
-    font-weight: $regular;
-    letter-spacing: 1px;
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
 
-    // a {
-    //   color: $text-aqua;
-    //   text-decoration: none;
-    //   @include pretty-text-underline($text-aqua, 1);
-    //   transition: color 240ms $t-1;
-
-    //   &:hover,
-    //   &:focus {
-    //     color: darken($text-aqua, 15%);
-    //     transition: color 240ms $t-1;
-    //   }
-    // }
+    & {
+      font-family: 'akrobatsemibold';
+      line-height: 1.23;
+      font-weight: vars.$regular;
+      letter-spacing: 1px;
+    }
   }
 
   &-18 {
-    @include font-smoothing;
-    @include noto-sans;
     $map: (576px: 16px, 768px: 18px);
-    line-height: 1.3;
-    @include poly-fluid-sizing('font-size', $map);
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.3;
+    }
 
     a {
-      @include noto-sans-bold;
-      transition: color 240ms $t-1;
-      color: $text-white;
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 700;
+      transition: color 240ms vars.$t-1;
+      color: vars.$text-white;
       text-decoration: none;
-      @include pretty-text-underline-dark($text-white, 1);
+      @include text.pretty-text-underline-dark(vars.$text-white, 1);
 
       &:hover {
-        color: darken($text-white, 15%);
+        color: color.adjust(vars.$text-white, $lightness: -15%);
       }
     }
   }
 
   &-16 {
-    @include font-smoothing;
-    @include noto;
     $map: (576px: 12px, 768px: 16px);
-    line-height: 1.4;
-    @include poly-fluid-sizing('font-size', $map);
+    @include mixins.font-smoothing;
+    @include type.poly-fluid-sizing('font-size', $map);
+
+    & {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+    }
   }
-
-  // &-20 {
-  //   @include font-smoothing;
-  //   font-family: $serif;
-  //   $map: (576px: 19px, 768px: 20px);
-  //   line-height: 1.4;
-  //   @include poly-fluid-sizing('font-size', $map);
-  //   font-weight: $regular;
-
-  //   a {
-  //     color: $text-aqua;
-  //     text-decoration: none;
-  //     @include pretty-text-underline($text-aqua, 1);
-  //     transition: color 240ms $t-1;
-
-  //     &:hover,
-  //     &:focus {
-  //       color: darken($text-aqua, 15%);
-  //       transition: color 240ms $t-1;
-  //     }
-  //   }
-  // }
 }
 
 // Link Styles
@@ -153,38 +157,38 @@
 .link {
 
   &-title {
-    transition: color 240ms $t-1;
+    transition: color 240ms vars.$t-1;
     &:hover {
-      color: lighten($text-dark, 20%);
+      color: color.adjust(vars.$text-dark, $lightness: 20%);
     }
   }
 
   &-underline {
-    transition: color 240ms $t-1;
+    transition: color 240ms vars.$t-1;
     text-decoration: none;
-    @include pretty-text-underline($text-dark, 1);
+    @include text.pretty-text-underline(vars.$text-dark, 1);
 
     &:hover {
-      color: lighten($text-dark, 20%);
+      color: color.adjust(vars.$text-dark, $lightness: 20%);
     }
   }
 
   &-underline-light {
-    transition: color 240ms $t-1;
+    transition: color 240ms vars.$t-1;
     text-decoration: none;
-    @include pretty-text-underline($text-white, 1);
+    @include text.pretty-text-underline(vars.$text-white, 1);
 
     &:hover {
-      color: darken($text-white, 15%);
+      color: color.adjust(vars.$text-white, $lightness: -15%);
     }
   }
 
   // &-footer {
-  //   color: $text-white;
+  //   color: vars.$text-white;
 
   //   &:hover,
   //   &:focus {
-  //     color: darken($text-white, 15%);
+  //     color: darken(vars.$text-white, 15%);
   //   }
   // }
 
@@ -201,9 +205,9 @@
   //     transform: translateX(-45%);
   //     width: pxem(30);
   //     height: pxem(5);
-  //     background-color: $fill-pink;
+  //     background-color: vars.$fill-pink;
   //     opacity: 0;
-  //     transition: opacity 240ms $t-1;
+  //     transition: opacity 240ms vars.$t-1;
   //   }
   // }
 
@@ -218,11 +222,11 @@
 // -------------------------
 .regular,
 .normal {
-  font-weight: $regular;
+  font-weight: vars.$regular;
 }
 
 .bold {
-  font-weight: $bold;
+  font-weight: vars.$bold;
 }
 
 .italic {

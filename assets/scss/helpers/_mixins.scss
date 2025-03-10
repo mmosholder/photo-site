@@ -65,7 +65,7 @@ $breakpoints: (
 
 // Function for converting pixels to rems
 @function pxem($px) {
-  @return (($px / 16) * 1rem);
+  @return calc(($px / 16) * 1rem);
 }
 
 

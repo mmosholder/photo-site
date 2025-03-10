@@ -1,3 +1,5 @@
+@use '../helpers/vars' as vars;
+@use '../helpers/mixins' as mixins;
 @mixin pretty-text-underline($bg-color, $size, $hover-color: $bg-color) {
   display: inline;
   text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff;
@@ -49,8 +51,8 @@
 @mixin grow-text-underline($bgcolor) {
   position: relative;
   z-index: 1;
-  padding: pxem(6) pxem(3) pxem(3) pxem(3);
-  transition: color 240ms $t-1;
+  padding: mixins.pxem(6) mixins.pxem(3) mixins.pxem(3) mixins.pxem(3);
+  transition: color 240ms vars.$t-1;
 
   &:after {
     content: "";
@@ -59,13 +61,13 @@
     height: 6px;
     bottom: -2px;
     left: 0;
-    background-color: $bgcolor;
-    transition: height 240ms $t-1;
+    background-color: vars.$bgcolor;
+    transition: height 240ms vars.$t-1;
     z-index: -1;
   }
 
   &:hover {
-    color: $color-white;
+    color: vars.$color-white;
 
     &:after {
       height: 100%;

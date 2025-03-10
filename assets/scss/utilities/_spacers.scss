@@ -1,9 +1,9 @@
-//
+@use '../helpers/mixins' as mixins;
 // Spacing Classes
 // --------------------------------------------------
 
 // Margin bottom
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &mb-#{$i} {
@@ -13,7 +13,7 @@
 }
 
 // Negative margin bottom
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &nmb-#{$i} {
@@ -23,7 +23,7 @@
 }
 
 // Margin top
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &mt-#{$i} {
@@ -33,7 +33,7 @@
 }
 
 // Negative margin top
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &nmt-#{$i} {
@@ -43,7 +43,7 @@
 }
 
 // Margin right
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &mr-#{$i} {
@@ -53,7 +53,7 @@
 }
 
 // Margin left
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &ml-#{$i} {
@@ -63,7 +63,7 @@
 }
 
 // Padding bottom
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &pb-#{$i} {
@@ -73,7 +73,7 @@
 }
 
 // Padding top
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 1 through 60 {
     $i: $i * 5;
     &pt-#{$i} {
@@ -83,7 +83,7 @@
 }
 
 // Padding left
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 0 through 60 {
     $i: $i * 5;
     &pl-#{$i} {
@@ -93,7 +93,7 @@
 }
 
 // Padding right
-@include generate-breakpoint-prefixes {
+@include mixins.generate-breakpoint-prefixes {
   @for $i from 0 through 60 {
     $i: $i * 5;
     &pr-#{$i} {

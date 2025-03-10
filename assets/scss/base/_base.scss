@@ -1,3 +1,5 @@
+@use "../helpers/vars" as vars;
+
 //
 // Base Styles
 // --------------------------------------------------
@@ -94,18 +96,18 @@ iframe { border: 0; }
 
 // Ensure we only define type using our default classes.
 small {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 sub,
 sup {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 
 // Switching from ems to rems for consistency and our own sanity.
 sup {
-  top: (-$space-1);
+  top: (-(vars.$space-1));
 }
 
 sub {
@@ -117,7 +119,7 @@ code,
 kbd,
 pre,
 samp {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 
@@ -131,7 +133,7 @@ fieldset {
 
 // Making sure that bold is 600, since we use semibold instead.
 optgroup {
-  font-weight: $bold;
+  font-weight: vars.$bold;
 }
 
 blockquote:before,

@@ -1,37 +1,26 @@
 <template>
   <section>
-    <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
+    <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
 </template>
 
 
-<script>
-export default {
-  data () {
-    return { story: { content: {} } }
-  },
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-  mounted() {
-    this.$storyblok.init();
-    this.$storyblok.on('change', () => {
-      location.reload(true)
-    })
-    this.$storyblok.on('published', () => {
-      location.reload(true)
-    })
-  },
+const config = useRuntimeConfig();
 
-  asyncData (context) {
-    // Check if we are in the editor mode
-    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
-    // Load the JSON from the API
-    return context.app.$storyapi.get(`cdn/stories/home`, {
-      version: version
-    }).then((res) => {
-      return JSON.parse(JSON.stringify(res.data));
-    }).catch((res) => {
-      context.error({ statusCode: res.response.status, message: res.response.data })
-    })
-  }
+const story = await useAsyncStoryblok(
+  'home',
+  { version: config.public.storyblokVersion }, // API Options
+  { resolveLinks: "url" } // Bridge Options
+);
+
+if (story.value?.status) {
+  throw createError({
+    statusCode: story.value.status,
+    statusMessage: story.value.response
+  });
 }
 </script>

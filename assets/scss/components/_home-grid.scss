@@ -1,3 +1,5 @@
+@use '../helpers/vars' as vars;
+@use '../helpers/mixins' as mixins;
 .home-grid {
   &-item {
     display: block;
@@ -7,13 +9,13 @@
     &:hover {
       .home-grid-item-bg {
         filter: grayscale(0);
-        transition: filter 240ms $t-1;
+        transition: filter 240ms vars.$t-1;
       }
 
       .home-grid-item-overlay {
         opacity: 1;
         display: flex;
-        transition: opacity 240ms $t-1;
+        transition: opacity 240ms vars.$t-1;
       }
     }
 
@@ -29,12 +31,12 @@
       filter: grayscale(100%);
       position: relative;
       z-index: 0;
-      transition: filter 240ms $t-1;
+      transition: filter 240ms vars.$t-1;
     }
 
     &-overlay {
       z-index: 1;
-      background-color: rgba($fill-gray, 0.7);
+      background-color: rgba(vars.$fill-gray, 0.7);
       width: 90%;
       height: 90%;
       position: absolute;
@@ -44,9 +46,9 @@
       justify-content: center;
       opacity: 1;
       display: flex;
-      transition: opacity 240ms $t-1;
+      transition: opacity 240ms vars.$t-1;
 
-      @include mq($from: 700px) {
+      @include mixins.mq($from: 700px) {
         opacity: 0;
       }
     }
@@ -58,7 +60,7 @@
       width: 100%;
       text-align: center;
 
-      @include mq($from: $breakpoint-small) {
+      @include mixins.mq($from: vars.$breakpoint-small) {
         // max-width: 97%;
       }
     }
