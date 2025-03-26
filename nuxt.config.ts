@@ -2,21 +2,32 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@pinia/nuxt',
     ['@storyblok/nuxt',
         {
-        	accessToken:
+            accessToken:
           	process.env.NODE_ENV == 'production'
-            	? 'HGemaVvgLEceClZxmcplmQtt'
-            	: 'QbPPtDbm6umYsWkrs7wVDAtt',
-        	apiOptions: {
+                ? 'HGemaVvgLEceClZxmcplmQtt'
+                : 'QbPPtDbm6umYsWkrs7wVDAtt',
+            apiOptions: {
           	cache: { type: 'memory' },
           bridge: true
         },
       },
     ],
   ],
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        // scss: {
+        //     additionalData: '@import "@/assets/scss/styles.scss";',
+        // },
+    },
+    },
+  },
 
   // plugins: ["~/plugins/components", { src: '~/plugins/vue-plyr', mode: 'client' }],
 
@@ -55,9 +66,9 @@ export default defineNuxtConfig({
 
   // loading: "~/components/loading.vue",
   css: [
-    '~/assets/scss/styles.scss'
-
+    '@/assets/scss/styles.scss'
   ],
+
   runtimeConfig: {
     public: {
       storyblokVersion: process.env.STORYBLOK_VERSION || 'published'
@@ -69,4 +80,6 @@ export default defineNuxtConfig({
   /*
   ** Build configuration
   */,
+
+  compatibilityDate: "2025-03-10",
 })
