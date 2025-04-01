@@ -9,12 +9,13 @@
           <div
             :class="[item.size == 'full' || item.component !== 'item' ? 'grid-col-xs-6 xs-mb-50 md-mb-100' : 'grid-col-xs-6 grid-col-sm-3 xs-mb-50 md-mb-100']"
             v-for="(item, i) in blok.images" :key="i">
-            <div class="category-item" v-if="item.component === 'item'">
+            <component class="category-item block" v-if="item.component === 'item'" :is="item.link ? 'a' : 'div'"
+              :href="item.link ? item.link.url : null" :target="item.link ? item.link.target : '_self'">
               <img :src="sizedImage(item)" alt="item.caption" class="z1">
               <div v-if="item.caption.length > 0" class="z2 category-item-caption">
                 <p class="text-right text-16 text-white">{{ item.caption }}</p>
               </div>
-            </div>
+            </component>
             <div class="category-item -video" v-else>
               <iframe :src="item.video_url" style="width: 100%; height: 100%; top: 0; position: absolute;"
                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
